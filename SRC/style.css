@@ -1,44 +1,48 @@
+/* Root variables for colors */
 :root {
-    --bg: rgb(25,25,75);
-    --bg2: rgb(50,50,100);
-    --accent: rgb(0, 223, 57);
+    --bg: rgb(25,25,75); /* Dark background color */
+    --bg2: rgb(50,50,100); /* Slightly lighter background color */
+    --accent: rgb(0, 223, 57); /* Accent color (green) */
 }
 
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Setting the font */
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
-    color: #fff;
+    background-color: var(--bg); /* Using the dark background */
+    color: #fff; /* White text color */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-size: 1.2em;
- background-image: url('https://images.unsplash.com/photo-1443926818681-717d074a57af?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-position: center;
-    background-size: cover;
-    text-shadow: 1px 1px 2px rgb(20,20,20);
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    font-size: 1.2em; /* Slightly larger font */
+    background-image: url('https://images.unsplash.com/photo-1443926818681-717d074a57af?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Background image */
+    background-position: center; /* Centers the background image */
+    background-size: cover; /* Ensures the background covers the whole screen */
+    text-shadow: 1px 1px 2px rgb(20,20,20); /* Adds a subtle shadow to text */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack child elements vertically */
 }
 
+/* Heading 1 styling */
 h1 {
-    justify-self: center;
-    margin-top: 0;
+    justify-self: center; /* Center the heading horizontally */
+    margin-top: 0; /* Removes top margin */
 }
 
+/* Container for the main content */
 .container {
-    backdrop-filter: blur(16px) saturate(164%);
-    -webkit-backdrop-filter: blur(16px) saturate(164%);
-    background-color: rgba(17, 25, 40, 0.56);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-
-    max-width: 800px;
-    font-size: 1.2em;
-    padding: 75px;
+    backdrop-filter: blur(16px) saturate(164%); /* Applies a blur effect to the background */
+    -webkit-backdrop-filter: blur(16px) saturate(164%); /* Webkit support for backdrop-filter */
+    background-color: rgba(17, 25, 40, 0.56); /* Semi-transparent dark background */
+    border-radius: 12px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.125); /* Light border */
+    max-width: 800px; /* Max width of the container */
+    font-size: 1.2em; /* Font size */
+    padding: 75px; /* Padding inside the container */
     
+    /* Table cell styling inside the container */
     td {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -46,88 +50,91 @@ h1 {
         padding-left: 10px;
     }
 
+    /* Time input field container */
     .time-input {
         display: flex;
-        /* padding: 5px; */
-        font-size: 1.1em;
-        outline: none;
-        width: 25px;
+        flex-direction: row; /* Row layout for time inputs */
+        font-size: 1.1em; /* Slightly larger font */
+        outline: none; /* Removes outline on focus */
+        width: 25px; /* Sets width */
     }
 
+    /* Removes number input spinner arrows in Firefox */
     input[type="number"] {
-    -moz-appearance: textfield; /* Removes the up/down arrows in Firefox */
+        -moz-appearance: textfield; /* Firefox-specific */
     }
 
+    /* Removes number input spinner arrows in Chrome, Safari, and Edge */
     input[type="number"]::-webkit-inner-spin-button, 
     input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none; /* Removes the up/down arrows in Chrome, Safari, and Edge */
-        margin: 0; /* Removes additional margins */
-    }
-    /* Container for time selector */
-    .am-pm-selector {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
+        -webkit-appearance: none; /* Chrome/Safari/Edge */
+        margin: 0;
     }
 
-    /* Hide the default radio buttons */
+    /* AM/PM selector container styling */
+    .am-pm-selector {
+        display: flex;
+        flex-direction: row; /* Row layout for AM/PM buttons */
+        gap: 5px; /* Adds space between buttons */
+        padding-left: 5px; /* Padding on the left */
+    }
+
+    /* Hide default radio buttons */
     .am-pm-selector input[type="radio"] {
         display: none;
     }
 
-    /* Style for the labels as square buttons */
+    /* Style for AM/PM labels (buttons) */
     .am-pm-selector label {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 45px;
         height: 32px;
-        border: 2px solid #28a745;
-        border-radius: 8px;
-        background-color: #fff;
-        color: #333;
-        font-size: 1.1em;
-        /* font-weight: bold; */
-        cursor: pointer;
-        text-align: center;
-        transition: all 0.3s ease;
+        border: 2px solid #28a745; /* Green border */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #fff; /* White background */
+        color: #333; /* Dark text color */
+        font-size: .9em; /* Smaller font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        text-align: center; /* Centered text */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
     }
 
-    /* Hover effect for labels */
+    /* Hover effect for AM/PM labels */
     .am-pm-selector label:hover {
-        background-color: #f0f0f0;
+        background-color: #f0f0f0; /* Light grey on hover */
     }
 
     /* Style for selected radio button */
     .am-pm-selector input[type="radio"]:checked + label {
-        background-color: #28a745;
-        color: #fff;
-        border-color: #28a745;
-        transform: scale(1.05); /* Slightly enlarges the selected button */
+        background-color: #28a745; /* Green background for selected button */
+        color: #fff; /* White text for selected */
+        border-color: #28a745; /* Green border */
+        transform: scale(1.05); /* Slightly enlarge selected button */
     }
-
 }
 
+/* Total container styling */
 .total-container {
-
     padding-top: 10px;
     padding-bottom: 10px;
-    justify-self: center;
-    width: 100%;
+    justify-self: center; /* Center the total container */
+    width: 100%; /* Full width */
+    backdrop-filter: blur(16px) saturate(80%); /* Background blur effect */
+    -webkit-backdrop-filter: blur(16px) saturate(80%); /* Webkit support */
+    background-color: rgba(17, 25, 40, 0.1); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.125); /* Light border */
 
-    backdrop-filter: blur(16px) saturate(80%);
-    -webkit-backdrop-filter: blur(16px) saturate(80%);
-    background-color: rgba(17, 25, 40, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-
+    /* Paragraph styling inside the total container */
     p {
-        margin: 0px;
-        justify-self: center;
+        margin: 0px; /* No margin */
+        justify-self: center; /* Center the paragraph */
     }
 }
 
+/* Heading 3 styling */
 h3 {
-    text-shadow: 1px 1px 2px rgb(20,20,20);
+    text-shadow: 1px 1px 2px rgb(20,20,20); /* Adds text shadow for h3 */
 }
-

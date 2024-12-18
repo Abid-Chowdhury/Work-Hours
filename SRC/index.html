@@ -26,9 +26,10 @@
                 <tr>
                     <td>MON</td>
 
-                    <td class="time-input">
-                        <input type="number" min="1" max="12" step="1" class="time-input" id="monday-in-hour">
-                        <input class="time-input" id="monday-in-minute">
+                    <td class="time-input" id="monday-in">
+                        <input type="number" min="1" max="12" step="1" class="time-input" id="hour">
+                        :
+                        <input type="number" min="1" max="12" step="1" class="time-input" id="minute">
                         <div class="am-pm-selector">
                             <div class="am">
                                 <input type="radio" id="am" name="am-pm" value="AM" checked>
@@ -40,8 +41,9 @@
                             </div>
                         </div>
                     </td>
-                    <td><input type="time" id="monday-in" value="00:00"></td>
-                    <td><input type="time" id="monday-lunch-in"></td>
+                    <td>
+
+                    </td>
                     <td><input type="time" id="monday-lunch-out"></td>
                     <td><input type="time" id="monday-out"></td>
                     <td class="daily-total" id="monday">00:00</td>
