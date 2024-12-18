@@ -19,14 +19,16 @@ body {
     background-position: center;
     background-size: cover;
     text-shadow: 1px 1px 2px rgb(20,20,20);
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     justify-self: center;
+    margin-top: 0;
 }
 
 .container {
-    
     backdrop-filter: blur(16px) saturate(164%);
     -webkit-backdrop-filter: blur(16px) saturate(164%);
     background-color: rgba(17, 25, 40, 0.56);
@@ -35,10 +37,7 @@ h1 {
 
     max-width: 800px;
     font-size: 1.2em;
-    /* background: var(--bg2); */
-    padding: 20px;
-    /* border-radius: 8px; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    padding: 75px;
     
     td {
         padding-top: 15px;
@@ -46,11 +45,71 @@ h1 {
         padding-right: 10px;
         padding-left: 10px;
     }
+
+    .time-input {
+        display: flex;
+        /* padding: 5px; */
+        font-size: 1.1em;
+        outline: none;
+        width: 25px;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield; /* Removes the up/down arrows in Firefox */
+    }
+
+    input[type="number"]::-webkit-inner-spin-button, 
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Removes the up/down arrows in Chrome, Safari, and Edge */
+        margin: 0; /* Removes additional margins */
+    }
+    /* Container for time selector */
+    .am-pm-selector {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    /* Hide the default radio buttons */
+    .am-pm-selector input[type="radio"] {
+        display: none;
+    }
+
+    /* Style for the labels as square buttons */
+    .am-pm-selector label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 32px;
+        border: 2px solid #28a745;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #333;
+        font-size: 1.1em;
+        /* font-weight: bold; */
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    /* Hover effect for labels */
+    .am-pm-selector label:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Style for selected radio button */
+    .am-pm-selector input[type="radio"]:checked + label {
+        background-color: #28a745;
+        color: #fff;
+        border-color: #28a745;
+        transform: scale(1.05); /* Slightly enlarges the selected button */
+    }
+
 }
 
 .total-container {
-    /* background-color: red; */
-    /* border-radius: 25px; */
+
     padding-top: 10px;
     padding-bottom: 10px;
     justify-self: center;
@@ -67,3 +126,8 @@ h1 {
         justify-self: center;
     }
 }
+
+h3 {
+    text-shadow: 1px 1px 2px rgb(20,20,20);
+}
+
