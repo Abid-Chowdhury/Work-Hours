@@ -1,18 +1,27 @@
+:root {
+    --bg: rgb(25,25,75);
+    --bg2: rgb(50,50,100)
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+h1 {
+    justify-self: center;
+}
+
 .container {
     max-width: 800px;
-    background: #fff;
+    background: var(--bg2);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
