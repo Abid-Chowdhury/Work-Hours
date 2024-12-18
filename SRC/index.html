@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+    <!-- Character encoding and viewport settings for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>Work Hours Tracker - Abid C</title>
+    <!-- Link to external stylesheet for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Main container for the work hours tracker -->
     <div class="container">
+        <!-- Heading for the work hours tracker -->
         <h1>Work Hours Tracker</h1>
+
+        <!-- Table to track work hours for each day of the week -->
         <table id="work-hours">
             <thead>
+                <!-- Table header with columns for day, clock-in, lunch times, and work duration -->
                 <tr>
                     <th>Day</th>
                     <th>Clock In</th>
@@ -23,13 +31,15 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Row for Monday -->
                 <tr>
                     <td>MON</td>
-
+                    <!-- Time input for Monday clock-in time -->
                     <td class="time-input" id="monday-in">
                         <input type="number" min="1" max="12" step="1" class="time-input" id="hour">
                         :
                         <input type="number" min="1" max="12" step="1" class="time-input" id="minute">
+                        <!-- AM/PM selector for clock-in time -->
                         <div class="am-pm-selector">
                             <div class="am">
                                 <input type="radio" id="am" name="am-pm" value="AM" checked>
@@ -41,13 +51,15 @@
                             </div>
                         </div>
                     </td>
-                    <td>
-
-                    </td>
+                    <td></td> <!-- Placeholder for lunch in time -->
+                    <!-- Time input for Monday lunch-out time -->
                     <td><input type="time" id="monday-lunch-out"></td>
+                    <!-- Time input for Monday clock-out time -->
                     <td><input type="time" id="monday-out"></td>
+                    <!-- Placeholder for the daily total worked time -->
                     <td class="daily-total" id="monday">00:00</td>
                 </tr>
+                <!-- Repeat similar rows for Tuesday through Friday -->
                 <tr>
                     <td>TUE</td>
                     <td><input type="time" id="tuesday-in"></td>
@@ -78,17 +90,21 @@
                 </tr>
             </tbody>
         </table>
-        <!-- <button onclick="calculateTotalHours()">Calculate Total Hours</button> -->
+
+        <!-- Container for displaying the total worked hours -->
         <div class="total-container">
+            <!-- Paragraph displaying the total hours and minutes worked -->
             <p class="total">Total Hours Worked: <span id="total-hours">0</span> hours <span id="total-minutes">0</span>
                 minutes</p>
         </div>
     </div>
 
+    <!-- Footer section with creator's name -->
     <div class="footer">
         <h3>Created by Abid Chowdhury</h3>
     </div>
 
+    <!-- Link to external JavaScript file for interactivity -->
     <script src="script.js"></script>
 </body>
 
