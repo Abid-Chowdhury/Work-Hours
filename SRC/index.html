@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Hours Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Work Hours Tracker</h1>
+        <table id="work-hours">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>In</th>
+                    <th>Lunch In</th>
+                    <th>Lunch Out</th>
+                    <th>Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td><input type="time" id="monday-in"></td>
+                    <td><input type="time" id="monday-lunch-in"></td>
+                    <td><input type="time" id="monday-lunch-out"></td>
+                    <td><input type="time" id="monday-out"></td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td><input type="time" id="tuesday-in"></td>
+                    <td><input type="time" id="tuesday-lunch-in"></td>
+                    <td><input type="time" id="tuesday-lunch-out"></td>
+                    <td><input type="time" id="tuesday-out"></td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td><input type="time" id="wednesday-in"></td>
+                    <td><input type="time" id="wednesday-lunch-in"></td>
+                    <td><input type="time" id="wednesday-lunch-out"></td>
+                    <td><input type="time" id="wednesday-out"></td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td><input type="time" id="thursday-in"></td>
+                    <td><input type="time" id="thursday-lunch-in"></td>
+                    <td><input type="time" id="thursday-lunch-out"></td>
+                    <td><input type="time" id="thursday-out"></td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td><input type="time" id="friday-in"></td>
+                    <td><input type="time" id="friday-lunch-in"></td>
+                    <td><input type="time" id="friday-lunch-out"></td>
+                    <td><input type="time" id="friday-out"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="calculateTotalHours()">Calculate Total Hours</button>
+        <p class="total">Total Hours Worked: <span id="total-hours">0</span> hours</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
