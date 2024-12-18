@@ -1,6 +1,7 @@
 :root {
     --bg: rgb(25,25,75);
-    --bg2: rgb(50,50,100)
+    --bg2: rgb(50,50,100);
+    --accent: rgb(0, 223, 57);
 }
 
 body {
@@ -17,6 +18,7 @@ body {
  background-image: url('https://images.unsplash.com/photo-1443926818681-717d074a57af?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-size: cover;
+    text-shadow: 1px 1px 2px rgb(20,20,20);
 }
 
 h1 {
