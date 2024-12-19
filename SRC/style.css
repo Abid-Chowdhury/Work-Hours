@@ -54,7 +54,7 @@ h1 {
     .time-input {
         display: flex;
         flex-direction: row; /* Row layout for time inputs */
-        font-size: 1.1em; /* Slightly larger font */
+        font-size: 1em; /* Slightly larger font */
         outline: none; /* Removes outline on focus */
         width: 25px; /* Sets width */
     }
@@ -76,7 +76,7 @@ h1 {
     .am-pm-selector {
         display: flex;
         flex-direction: row; /* Row layout for AM/PM buttons */
-        gap: 5px; /* Adds space between buttons */
+        gap: 10px; /* Adds space between buttons */
         padding-left: 5px; /* Padding on the left */
         
         div {
