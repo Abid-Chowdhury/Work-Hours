@@ -41,14 +41,6 @@ h1 {
     max-width: 800px; /* Max width of the container */
     font-size: 1.2em; /* Font size */
     padding: 75px; /* Padding inside the container */
-    
-    /* Table cell styling inside the container */
-    td {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
 
     /* Time input field container */
     .time-input {
